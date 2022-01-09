@@ -54,8 +54,8 @@ requirements_path = os.path.join(
 )
 
 
-async def eviral_info(FIREX_info):
-    infos = requests.get(FIREX_info).json()
+async def eviral_info(FOREX_info):
+    infos = requests.get(FIREX-INFO).json()
     _version = infos["FIREX-INFO"]["version"]
     _release = infos["FIREX-INFO"]["release-date"]
     _branch = infos["FIREX-INFO"]["branch"]
