@@ -14,7 +14,7 @@ from userbot.utils import (
     start_spam,
 )
 
-os.system("pip install telethon==1.24.0")
+
 l2 = Config.SUDO_COMMAND_HAND_LER
 eviral_PIC = "https://telegra.ph/file/e753315316673cff51085.mp4"
 l1 = Config.COMMAND_HAND_LER
@@ -36,9 +36,6 @@ plc = os.environ.get("PLUGIN", None)
 
 async def hekp():
     try:
-        os.environ[
-            "eviral_STRING"
-        ] = "String Is A Sensitive Data \nSo Its Protected By FIREX"
         if Config.LOGGER_ID != 0:
             await bot.send_file(
                 Config.LOGGER_ID,
